@@ -1,8 +1,7 @@
-import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
+import {  useNavigate, useParams} from "react-router-dom";
 import { AppBar } from "../components/AppBar";
 import { useTodos } from "../hooks/useTodo";
 import { Skeleton } from "../components/animation/Skeleton";
-import {Todo} from '../hooks/useTodo'
 import { TodoCard } from "../components/TodoCard";
 import { toast } from "react-hot-toast";
 import { useEffect, useState } from "react";

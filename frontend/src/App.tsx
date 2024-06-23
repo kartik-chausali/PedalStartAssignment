@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 import './App.css'
 import { Toaster } from 'react-hot-toast'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -9,7 +9,6 @@ import { AddTask } from './pages/AddTask'
 import { ReadMore } from './pages/ReadMore'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
    <>

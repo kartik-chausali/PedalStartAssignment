@@ -3,7 +3,7 @@ import { BACKEND_URL } from "../config";
 import toast from "react-hot-toast"
 import { useNavigate, useParams } from "react-router-dom";
 import { Priority } from "../hooks/useTodo";
-export function TodoCard({tittle, description, todoId,onDelete, priority,dueDate}:{tittle:string, description:string, todoId:string, onDelete:(id:string)=>void, priority:Priority, dueDate:string}){
+export function TodoCard({tittle, description, todoId,onDelete, dueDate}:{tittle:string, description:string, todoId:string, onDelete:(id:string)=>void, priority:Priority, dueDate:string}){
 
 const navigate = useNavigate();
 const {userId} = useParams()
@@ -12,7 +12,7 @@ let type = "edit";
     console.log("inside function")
     try{
         console.log(todoId)
-        const res = await axios.post(`${BACKEND_URL}/api/v1/todo/delete/${todoId}`,{},  {
+        await axios.post(`${BACKEND_URL}/api/v1/todo/delete/${todoId}`,{},  {
         headers:{
             Authorization:localStorage.getItem('token')
         }
@@ -56,5 +56,5 @@ let type = "edit";
 }
 
 export function Circle(){
-
+    return <div></div>
 }

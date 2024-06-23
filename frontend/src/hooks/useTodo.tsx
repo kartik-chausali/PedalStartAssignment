@@ -3,7 +3,7 @@ import toast from 'react-hot-toast'
 import axios from "axios"
 import { BACKEND_URL } from "../config"
 import { useNavigate } from "react-router-dom"
-import { getUserId } from "../components/AppBar"
+
 
 export enum Priority{
     URGENT,
@@ -71,7 +71,7 @@ export const useTodos = ({userId}:{userId:string})=>{
 }
 
 
-async function fetchTodos({setTodos, setLoading, setAuthorized,userId,loading}:{setTodos: (val:Todo[])=>void  , setLoading:(val:boolean)=>void , setAuthorized:(val:boolean)=>void,  userId:string, loading:boolean} ){
+async function fetchTodos({setTodos, setLoading, setAuthorized,userId}:{setTodos: (val:Todo[])=>void  , setLoading:(val:boolean)=>void , setAuthorized:(val:boolean)=>void,  userId:string, loading:boolean} ){
      
         try{
 
